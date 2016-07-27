@@ -1,6 +1,6 @@
 # xf002
 
-Q1: When running webpack, bundle is compiling to the output directory nicely, but when remove it, and start webpack-dev-server it cannot find the bundle file. When I modify the src/app.js the browser is reloading, but I cannot see that my bundle is present. I've tried with `--hot` and `--inline` flags too - no bundle loaded.
+[SOLVED] Q1: When running webpack, bundle is compiling to the output directory nicely, but when remove it, and start webpack-dev-server it cannot find the bundle file. When I modify the src/app.js the browser is reloading, but I cannot see that my bundle is present. I've tried with `--hot` and `--inline` flags too - no bundle loaded.
 
 ```
 grzes@ayanami:/var/www/workspaces/xf002$ webpack-dev-server
@@ -17,3 +17,4 @@ chunk    {0} app.js (main) 21 bytes [rendered]
 webpack: bundle is now VALID.
 
 ```
+A1: The webpack.config has too have publicPath specified to the output folder
